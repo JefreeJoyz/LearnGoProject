@@ -5,5 +5,6 @@ func main() {
 	//mainFunc("Мир")
 	//showMessage()
 	//enterTheClub(19)
-	check()
+	//check()
+	checkVariable()
 }
