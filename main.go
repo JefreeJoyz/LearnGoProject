@@ -6,5 +6,7 @@ func main() {
 	//showMessage()
 	//enterTheClub(19)
 	//check()
-	checkVariable()
+	//checkVariable()
+	//printMessages(messa)
+	workWithSlices(messaSlice)
 }
