@@ -8,5 +8,6 @@ func main() {
 	//check()
 	//checkVariable()
 	//printMessages(messa)
-	workWithSlices(messaSlice)
+	//workWithSlices(messaSlice)
+	fForMatrix()
 }
