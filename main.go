@@ -9,5 +9,7 @@ func main() {
 	//checkVariable()
 	//printMessages(messa)
 	//workWithSlices(messaSlice)
-	fForMatrix()
+	//fForMatrix()
+	//PanicRecoverDefer()
+	testMap()
 }
