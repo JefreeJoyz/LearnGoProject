@@ -11,5 +11,6 @@ func main() {
 	//workWithSlices(messaSlice)
 	//fForMatrix()
 	//PanicRecoverDefer()
-	testMap()
+	//testMap()
+	testStruct()
 }
