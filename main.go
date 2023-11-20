@@ -12,5 +12,6 @@ func main() {
 	//fForMatrix()
 	//PanicRecoverDefer()
 	//testMap()
-	testStruct()
+	//testStruct()
+	testInterface()
 }
