@@ -13,5 +13,7 @@ func main() {
 	//PanicRecoverDefer()
 	//testMap()
 	//testStruct()
-	testInterface()
+	//testInterface()
+	//services.GetMyIp()
+	testUnitTest()
 }
