@@ -7,6 +7,10 @@ import (
 	"net/http"
 )
 
+func GetMyIpEndpoint(w http.ResponseWriter, r *http.Request) {
+	GetMyIp()
+}
+
 func GetMyIp() {
 	url := "https://api.ipify.org?format=json"
 	var getIP GetIP

@@ -1,5 +1,11 @@
 package main
 
+import (
+	"fmt"
+	"learn-go-project/services"
+	"net/http"
+)
+
 func main() {
 
 	//mainFunc("Мир")
@@ -15,5 +21,8 @@ func main() {
 	//testStruct()
 	//testInterface()
 	//services.GetMyIp()
-	testUnitTest()
+	//testUnitTest()
+	http.HandleFunc("/handler1", services.GetMyIpEndpoint)
+	http.ListenAndServe(":8080", nil)
+	fmt.Println("hello")
 }
