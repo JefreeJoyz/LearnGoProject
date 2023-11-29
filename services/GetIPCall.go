@@ -8,10 +8,12 @@ import (
 )
 
 func GetMyIpEndpoint(w http.ResponseWriter, r *http.Request) {
-	GetMyIp()
+	fmt.Fprint(w, "hello from my .go file\n")
+	a := GetMyIp()
+	fmt.Fprintf(w, "%s", a)
 }
 
-func GetMyIp() {
+func GetMyIp() string {
 	url := "https://api.ipify.org?format=json"
 	var getIP GetIP
 	//var getDetailsIP GetDetailsIP
@@ -22,17 +24,18 @@ func GetMyIp() {
 	err := json.Unmarshal(body, &getIP)
 	if err != nil {
 		fmt.Println("Ошибка при разборе JSON:", err)
-		return
+		return ""
 	}
 
 	// Используем данные
 	fmt.Printf("My ip is %s\n", getIP.Ip)
 	myIP := getIP.Ip
-	GetDetailIP(myIP)
+
+	return GetDetailIP(myIP)
 
 }
 
-func GetDetailIP(ip string) {
+func GetDetailIP(ip string) string {
 	url := fmt.Sprintf("https://ipinfo.io/%s/geo", ip)
 	var getDetailsIP GetDetailsIP
 
@@ -42,11 +45,12 @@ func GetDetailIP(ip string) {
 	err := json.Unmarshal(body, &getDetailsIP)
 	if err != nil {
 		fmt.Println("Ошибка при разборе JSON in GetDetailIP:", err)
-		return
+		return ""
 	}
 
 	// Используем данные
 	fmt.Println(getDetailsIP.Country)
+	return getDetailsIP.Country
 
 }
 
